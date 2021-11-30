@@ -2,6 +2,7 @@ class SignupsController < ApplicationController
 # Remember I need to use the valid? because I'm usin the strong params
     def create
         new_people = Signup.create(signup_params)
+        # The new_people can access because we adding the add in the signing process
         # Important to accesss values Using OOP Please Remember this always.
         if new_people.valid?
             render json: new_people.activity,status: :created
