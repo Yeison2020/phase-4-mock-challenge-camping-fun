@@ -27,7 +27,7 @@ class CampersController < ApplicationController
             # I  can add the number of the status instead
             # Example status: 422 better unprocessable_entity
             render json: {
-                errors: new_camper.errors.full_massages
+                "errors": ["validation errors"]
               }, status: :unprocessable_entity
         end
 
